@@ -11,3 +11,9 @@
 11. Не комммитить (commit) файлы .exe, .bin - сделать ПКМ - Ignore 
 12. Cherry-Pick - подтянуть нужный коммит (Commit)
 
+
+
+
+ps: добавить все файлы: git add .
+новая ветка + сразу checkout на неё: git checkout -b branchName
+
