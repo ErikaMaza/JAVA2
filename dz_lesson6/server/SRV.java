@@ -41,7 +41,7 @@ public class SRV {
     }
 
     void sendMessage(String msg) throws IOException {
-        if (msg.equalsIgnoreCase("Выход")) close();
+        if (msg.equalsIgnoreCase("Выход"));
         out.println("S ::: " + msg);
         System.out.println(msg);
     }
