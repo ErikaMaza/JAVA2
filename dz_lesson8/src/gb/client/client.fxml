@@ -1,0 +1,44 @@
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ListView?>
+<VBox fx:controller="gb.client.Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="center">
+
+    <HBox fx:id="upperPanel">
+
+        <TextField HBox.hgrow="ALWAYS" promptText="Логин" fx:id="loginfield"/>
+        <PasswordField promptText="Пароль" fx:id="passwordField" onAction="#tryToAuth"/>
+        <Button text="Авторизоваться" onAction="#tryToAuth" />
+
+    </HBox>
+
+    <HBox fx:id="registrPanel">
+        <TextField fx:id="regLog" promptText="Введите логин"/>
+        <TextField fx:id="regNick" promptText="Введите ник"/>
+        <PasswordField fx:id="regPass" promptText="Введите пароль"/>
+        <Button fx:id="btnPass" text="Регистрация" onAction="#addNewUser"/>
+    </HBox>
+
+    <HBox VBox.vgrow="ALWAYS">
+        <VBox HBox.hgrow="ALWAYS">
+            <TextArea fx:id="chatArea" editable="false" VBox.vgrow="ALWAYS"/>
+            <HBox fx:id="bottomPanel" managed="false" visible="false">
+
+                <TextField fx:id="msgField" HBox.hgrow="ALWAYS" promptText="Введите сообщение..." onAction="#sendMsg"/>
+                <Button text="Отправить" onAction="#sendMsg"/>
+
+            </HBox>
+        </VBox>
+        <ListView fx:id="clientsList" managed="false" visible="false"/>
+    </HBox>
+
+
+
+
+</VBox>
